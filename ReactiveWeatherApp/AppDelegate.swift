@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        _ = Observable<Int>
+            .interval(1, scheduler: MainScheduler.instance)
+            .subscribe( { _ in
+                print("Resource count: \(RxSwift.Resources.total).")
+            }
+        )
+        
         // Override point for customization after application launch.
         return true
     }
