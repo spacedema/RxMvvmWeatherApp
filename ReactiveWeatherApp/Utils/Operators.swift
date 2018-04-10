@@ -12,7 +12,7 @@ import RxCocoa
 import UIKit
 
 // Two way binding operator between control property and variable, that's all it takes {
-infix operator <-> : DefaultPrecedence
+infix operator <-> : DefaultPrecedence 
 
 func nonMarkedText(_ textInput: UITextInput) -> String? {
     let start = textInput.beginningOfDocument
