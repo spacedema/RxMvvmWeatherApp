@@ -27,12 +27,13 @@ class FiveDayForecastDetailViewModel : FiveDayForecastDetailViewModelType {
     var error: Observable<Error> {
         return self.errorSubject.asObservable()
     }
-    
+    var submitResult: Observable<String> = Observable.just("")
     
     // MARK: Properties
     private let isLoadingVariable = Variable(false)
     private let errorSubject = PublishSubject<Error>()
     private let disposeBag = DisposeBag()
+    private var cityId: Int!
     var mainInfo: String
     var descript: String
     var details: String
@@ -45,7 +46,7 @@ class FiveDayForecastDetailViewModel : FiveDayForecastDetailViewModelType {
         self.details = "\(city.temp), wind \(city.wind) m/s, \(city.pressure) hpa"
         self.weatherIcon = apiService.getWeatherImage(imageID: city.weather[0].icon)
         self.fiveDayForecast = fetchFiveDayForecast(cityId: city.id)
-        
+        self.cityId = city.id
         bind()
     }
     
@@ -58,17 +59,31 @@ extension FiveDayForecastDetailViewModel {
     
     private func bind() {
         
-        let _ = noteVariable.asObservable()
+        self.noteVariable.asObservable()
             .subscribe(onNext: { [weak self] note in
                 self?.canSubmitNote.on(.next(!note.isEmpty))
             })
         .disposed(by: disposeBag)
         
-        submitButtonDidTap.subscribe({ [weak self] _ in
-            print("api post")
-            self?.canSubmitNote.on(.next(false))
-         })
-        .disposed(by: disposeBag)
+        self.submitResult = submitButtonDidTap
+            .do(onNext: { [weak self] _ in
+                self?.isLoadingVariable.value = true
+            })
+            .flatMapLatest { [weak self] result -> Observable<String> in
+                if let this = self {
+                    return this.apiService.submitNoteMock(cityId: this.cityId, note: this.noteVariable.value)
+                        .catchError { error in
+                            this.errorSubject.onNext(error)
+                            return Observable.just("")
+                    }
+                } else {
+                    return Observable.just("")
+                }
+            }
+            .do(onNext: { [weak self] _ in
+                self?.isLoadingVariable.value = false
+                self?.canSubmitNote.on(.next(false))
+            })
     }
     
     private func fetchFiveDayForecast(cityId: Int) -> Observable<[FiveDayForecastCellViewModel]> {

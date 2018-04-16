@@ -23,4 +23,6 @@ protocol FiveDayForecastDetailViewModelType {
     var canSubmitNote: BehaviorSubject<Bool> { get }
     var isLoading: Observable<Bool> { get }
     var error: Observable<Error> { get }
+    var submitResult: Observable<String> { get }
+    
 }

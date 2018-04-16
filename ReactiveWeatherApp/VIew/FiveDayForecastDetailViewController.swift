@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PKHUD
 
 class FiveDayForecastDetailViewController: UIViewController, UITableViewDelegate {
 
@@ -48,6 +49,34 @@ class FiveDayForecastDetailViewController: UIViewController, UITableViewDelegate
         
         submitNoteButton.rx.tap
             .bind(to: viewModel.submitButtonDidTap)
+            .disposed(by: disposeBag)
+        
+        viewModel.submitResult
+            .subscribe({ message in
+                if !message.isCompleted {
+                    HUD.flash(.label(message.element), delay: 2)
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.isLoading
+            .filter { !$0 }
+            .subscribe({ _ in
+                HUD.hide()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.isLoading
+            .filter { $0 }
+            .subscribe({ _ in
+                HUD.show(.progress)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.error
+            .subscribe({ [weak self] error in
+                self?.showMessage((error.element?.localizedDescription)!)
+            })
             .disposed(by: disposeBag)
     }
     

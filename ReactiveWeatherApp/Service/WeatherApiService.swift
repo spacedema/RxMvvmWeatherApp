@@ -13,11 +13,7 @@ import RxSwift
 import RxAlamofire
 
 class WeatherApiService {
-    static let appId = "6fe95bb8e41b80a33bdabf14d71b0608"
-    static let url = "http://api.openweathermap.org/data/2.5/find"
-    static let imageUrl = "http://api.openweathermap.org/img/w/"
-    static let fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast/?id=524901&appid=6fe95bb8e41b80a33bdabf14d71b0608"
-    
+       
     func getForecast(city: String) -> Observable<[SearchResultsCellViewModel]> {
         
         let params: [String: String] = [
@@ -25,11 +21,11 @@ class WeatherApiService {
             "type": "like",
             "sort": "population",
             "units": "metric",
-            "appid": WeatherApiService.appId
+            "appid": API.apiKey
         ]
 
         return RxAlamofire
-            .json(.get, WeatherApiService.url, parameters: params)
+            .json(.get, Endpoints.Cities.fetch.url, parameters: params)
             .flatMap(parseJson)
     }
     
@@ -38,21 +34,31 @@ class WeatherApiService {
         let params: [String: String] = [
             "id": String(cityId),
             "units": "metric",
-            "appId": WeatherApiService.appId
+            "appId": API.apiKey
         ]
         
         return RxAlamofire
-            .json(.get, WeatherApiService.fiveDayUrl, parameters: params)
+            .json(.get, Endpoints.FiveDayForecast.fetch.url, parameters: params)
             .flatMap(parseFiveDayForecastJson)
     }
     
     func getWeatherImage(imageID: String) -> Observable<Data> {
+        
         return RxAlamofire
-            .request(.get, WeatherApiService.imageUrl + imageID + ".png")
+            .request(.get, Endpoints.Image.fetch.url + imageID + ".png")
             .data()
     }
     
+
+    func submitNoteMock(cityId: Int, note: String) -> Observable<String> {
+
+        return Observable
+            .just("'\(note)' for city with id: \(cityId)")
+            .delay(5, scheduler: MainScheduler.instance)
+    }
+    
     private func parseFiveDayForecastJson(json: Any) -> Observable<[FiveDayForecastCellViewModel]> {
+        
         let viewModels = JSON(json)["list"].array?.compactMap {
             FiveDayForecastCellViewModel(forecast: FiveDayForecast(json: $0)!, api: self)
         }
@@ -60,6 +66,7 @@ class WeatherApiService {
     }
     
     private func parseJson(json: Any) -> Observable<[SearchResultsCellViewModel]> {
+        
         guard let forecast = SearchResults(json: JSON(json)) else {
             return Observable.never()
         }

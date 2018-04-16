@@ -11,6 +11,7 @@ pod 'RxCocoa'
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'RxAlamofire'
+pod 'PKHUD'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

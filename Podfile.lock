@@ -1,5 +1,6 @@
 PODS:
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.2)
+  - PKHUD (5.0.0)
   - RxAlamofire (4.2.0):
     - RxAlamofire/Core (= 4.2.0)
   - RxAlamofire/Core (4.2.0):
@@ -12,18 +13,20 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - PKHUD
   - RxAlamofire
   - RxCocoa
   - RxSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: d59c2a4f74cffbf74c0d1e239c92dae314d76ea8
+PODFILE CHECKSUM: 326cd089c74e135b32c8edd8441a5a364c953f29
 
 COCOAPODS: 1.4.0

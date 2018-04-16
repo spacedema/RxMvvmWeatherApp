@@ -11,6 +11,7 @@
 		D514D8912074EBE200C9F256 /* SearchResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D8902074EBE200C9F256 /* SearchResultsListViewModel.swift */; };
 		D514D894207510EB00C9F256 /* SearchResultsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */; };
 		D514D8962076A9B600C9F256 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D8952076A9B600C9F256 /* Operators.swift */; };
+		D5205F8F2084E2A300CF6B8F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5205F8E2084E2A300CF6B8F /* Endpoints.swift */; };
 		D56270482072745E00564AFF /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56270472072745E00564AFF /* ForecastListViewController.swift */; };
 		D562704A20727AA200564AFF /* ForecastListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562704920727AA200564AFF /* ForecastListViewCell.swift */; };
 		D575998820737B9B000ECE14 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575998720737B9B000ECE14 /* SearchResults.swift */; };
@@ -40,6 +41,7 @@
 		D514D8902074EBE200C9F256 /* SearchResultsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsListViewModel.swift; sourceTree = "<group>"; };
 		D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCellViewModel.swift; sourceTree = "<group>"; };
 		D514D8952076A9B600C9F256 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		D5205F8E2084E2A300CF6B8F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		D56270472072745E00564AFF /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
 		D562704920727AA200564AFF /* ForecastListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewCell.swift; sourceTree = "<group>"; };
 		D575998720737B9B000ECE14 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D575998D20738F7C000ECE14 /* WeatherApiService.swift */,
+				D5205F8E2084E2A300CF6B8F /* Endpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveWeatherApp/Pods-ReactiveWeatherApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -277,6 +281,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -337,6 +342,7 @@
 				D562704A20727AA200564AFF /* ForecastListViewCell.swift in Sources */,
 				D5A7CB5D20726BCB0041EB72 /* AppDelegate.swift in Sources */,
 				D5EB71F72077D6A0009A2439 /* FiveDayForecastDetailViewModel.swift in Sources */,
+				D5205F8F2084E2A300CF6B8F /* Endpoints.swift in Sources */,
 				D575998E20738F7C000ECE14 /* WeatherApiService.swift in Sources */,
 				D514D8912074EBE200C9F256 /* SearchResultsListViewModel.swift in Sources */,
 				D5EB71F9207B81CD009A2439 /* FiveDayForecast.swift in Sources */,
