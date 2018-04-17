@@ -8,45 +8,31 @@
 
 import Foundation
 import SwiftyJSON
-import Alamofire
 import RxSwift
-import RxAlamofire
 
 class WeatherApiService {
-       
+    
+    let fetcher: NetworkingProtocol
+    
+    init(fetcher: NetworkingProtocol) {
+        
+        self.fetcher = fetcher
+    }
+    
     func getForecast(city: String) -> Observable<[SearchResultsCellViewModel]> {
         
-        let params: [String: String] = [
-            "q": city,
-            "type": "like",
-            "sort": "population",
-            "units": "metric",
-            "appid": API.apiKey
-        ]
-
-        return RxAlamofire
-            .json(.get, Endpoints.Cities.fetch.url, parameters: params)
-            .flatMap(parseJson)
+        return fetcher.fetchForecast(forCity: city, response: parseJson)
+        
     }
     
     func get5DayForecast(cityId: Int) -> Observable<[FiveDayForecastCellViewModel]> {
         
-        let params: [String: String] = [
-            "id": String(cityId),
-            "units": "metric",
-            "appId": API.apiKey
-        ]
-        
-        return RxAlamofire
-            .json(.get, Endpoints.FiveDayForecast.fetch.url, parameters: params)
-            .flatMap(parseFiveDayForecastJson)
+        return fetcher.fetchFiveDayForecast(forCityId: cityId, response: parseFiveDayForecastJson)
     }
     
     func getWeatherImage(imageID: String) -> Observable<Data> {
         
-        return RxAlamofire
-            .request(.get, Endpoints.Image.fetch.url + imageID + ".png")
-            .data()
+        return fetcher.fetchImage(forImageId: imageID)
     }
     
 

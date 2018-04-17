@@ -12,6 +12,8 @@
 		D514D894207510EB00C9F256 /* SearchResultsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */; };
 		D514D8962076A9B600C9F256 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D8952076A9B600C9F256 /* Operators.swift */; };
 		D5205F8F2084E2A300CF6B8F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5205F8E2084E2A300CF6B8F /* Endpoints.swift */; };
+		D522C36D2085E6F50014D3AB /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522C36C2085E6F50014D3AB /* NetworkingProtocol.swift */; };
+		D522C36F2085EE410014D3AB /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522C36E2085EE410014D3AB /* AlamofireNetworking.swift */; };
 		D56270482072745E00564AFF /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56270472072745E00564AFF /* ForecastListViewController.swift */; };
 		D562704A20727AA200564AFF /* ForecastListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562704920727AA200564AFF /* ForecastListViewCell.swift */; };
 		D575998820737B9B000ECE14 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575998720737B9B000ECE14 /* SearchResults.swift */; };
@@ -42,6 +44,8 @@
 		D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCellViewModel.swift; sourceTree = "<group>"; };
 		D514D8952076A9B600C9F256 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		D5205F8E2084E2A300CF6B8F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		D522C36C2085E6F50014D3AB /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		D522C36E2085EE410014D3AB /* AlamofireNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
 		D56270472072745E00564AFF /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
 		D562704920727AA200564AFF /* ForecastListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewCell.swift; sourceTree = "<group>"; };
 		D575998720737B9B000ECE14 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			path = VIew;
 			sourceTree = "<group>";
 		};
+		D522C3702085FCF70014D3AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D522C36C2085E6F50014D3AB /* NetworkingProtocol.swift */,
+				D522C36E2085EE410014D3AB /* AlamofireNetworking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D575998620737B10000ECE14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +171,7 @@
 		D5EB71FE207BA8E7009A2439 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D522C3702085FCF70014D3AB /* Network */,
 				D575998D20738F7C000ECE14 /* WeatherApiService.swift */,
 				D5205F8E2084E2A300CF6B8F /* Endpoints.swift */,
 			);
@@ -353,6 +367,8 @@
 				D514D894207510EB00C9F256 /* SearchResultsCellViewModel.swift in Sources */,
 				D5EB7201207BAED8009A2439 /* ViewControllerExtensions.swift in Sources */,
 				D56270482072745E00564AFF /* ForecastListViewController.swift in Sources */,
+				D522C36D2085E6F50014D3AB /* NetworkingProtocol.swift in Sources */,
+				D522C36F2085EE410014D3AB /* AlamofireNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

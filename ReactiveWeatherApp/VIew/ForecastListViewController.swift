@@ -27,7 +27,7 @@ class ForecastListViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.api = WeatherApiService()
+        self.api = WeatherApiService(fetcher: AlamofireNetworking())
         disposeBag = DisposeBag()
         
         tableView.rx.setDelegate(self)
