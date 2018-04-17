@@ -27,9 +27,9 @@ class SearchResultsCellViewModel : SearchResultsCellViewModelType {
     var mainInfo: String
     var details: String
     var coords: String
-    
 
     init(city: Forecast, api: WeatherApiService){
+        
         self.mainInfo = "\(city.name), \(city.country.uppercased()), \(city.weather[0].description)"
         self.details = "\(Int(city.temp)) C, wind \(city.wind) m/s, \(city.pressure) hpa"
         self.coords = "Geo coords [\(city.coordLat), \(city.coordLon)]"
