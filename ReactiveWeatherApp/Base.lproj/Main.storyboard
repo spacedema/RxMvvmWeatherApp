@@ -15,7 +15,7 @@
         <!--Find city-->
         <scene sceneID="ftD-kn-Lko">
             <objects>
-                <viewController id="o0e-cu-Lg4" customClass="ForecastListViewController" customModule="ReactiveWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ForecastListViewController" storyboardIdentifier="ForecastListViewController" id="o0e-cu-Lg4" customClass="ForecastListViewController" customModule="ReactiveWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEp-lk-bJw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPp-BK-xp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="15"/>
+            <point key="canvasLocation" x="-1217" y="15"/>
         </scene>
         <!--5 day forecast-->
         <scene sceneID="VGJ-Wg-X0n">
@@ -277,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKc-H8-fHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="12.561576354679804"/>
+            <point key="canvasLocation" x="871" y="15"/>
         </scene>
         <!--Master-->
         <scene sceneID="B82-iZ-nYT">
@@ -293,14 +293,14 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="6LU-Tx-fwW"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="V9m-0q-CCR">
                             <connections>
-                                <segue destination="o0e-cu-Lg4" kind="show" id="YH7-xt-yAD"/>
+                                <segue destination="o0e-cu-Lg4" kind="show" id="njU-xP-79F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4o-YS-5vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1433" y="15"/>
+            <point key="canvasLocation" x="-2030" y="15"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c7J-LK-Wne">
@@ -318,22 +318,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htl-f7-3b3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2182" y="15"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="0Gn-T5-Exb">
-            <objects>
-                <viewController id="d3D-eN-qBr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I09-dA-Qap">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="clI-F7-dHp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jQk-hT-gUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-705" y="15"/>
+            <point key="canvasLocation" x="-2828" y="15"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8vQ-xJ-Qgd">
@@ -351,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WqQ-pf-p8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="13"/>
+            <point key="canvasLocation" x="65" y="15"/>
         </scene>
     </scenes>
 </document>

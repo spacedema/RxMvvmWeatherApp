@@ -15,6 +15,7 @@ def common_pods
     pod 'RxAlamofire'
     pod 'PKHUD'
     pod 'Swinject'
+    pod 'SwinjectStoryboard'
 end
 
 target 'ReactiveWeatherApp' do

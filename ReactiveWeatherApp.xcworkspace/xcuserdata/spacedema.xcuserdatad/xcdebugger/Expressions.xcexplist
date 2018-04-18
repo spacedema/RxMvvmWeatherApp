@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #2 in ForecastListViewControllerSpec.spec():ForecastListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "controller.searchBar.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in WeatherFetcherSpec.spec():WeatherFetcherSpec.swift">
          <PersistentStrings>
             <PersistentString
@@ -19,45 +27,37 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in ForecastViewController.submit(_:):ForecastViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "WeatherInCityViewModel.initIcon():WeatherInCityViewModel.swift">
+         contextName = "WeatherApiService.parseJson(json:):WeatherApiService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "iconId">
+               value = "JSON(json)">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in Reactive&lt;A&gt;.items&lt;A, B, C&gt;(cellIdentifier:cellType:):UITableView+Rx.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tv">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchResults.init(json:):SearchResults.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;message&quot;].string">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchResultsListViewModel.bindObservableToFetchCities():SearchResultsListViewModel.swift">
       </ContextState>
       <ContextState
          contextName = "CityWeatherDetaiViewModel.init(api:city:):CityWeatherDetailViewModel.swift">
          <PersistentStrings>
             <PersistentString
                value = "fiveDayForecast">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in FiveDayForecastDetailViewController.dataBindButtons():FiveDayForecastDetailViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "message.element">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "City.init(json:):City.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "json[&quot;weather&quot;][&quot;id&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Weather.init(json:):Weather.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "json[&quot;main&quot;].string">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,37 +70,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in WeatherApiService.getForecast(city:):WeatherApiService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "error.localizedDescription">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #1 in ForecastViewController.submit(_:):ForecastViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "WeatherApiService.parseJson(json:):WeatherApiService.swift">
+         contextName = "closure #1 in FiveDayForecastDetailViewController.dataBindButtons():FiveDayForecastDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "JSON(json)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in FiveDayForecastDetailViewModel.bind():FiveDayForecastDetailViewModel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self!.canSubmitNote">
-            </PersistentString>
-            <PersistentString
-               value = "$0">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SearchResults.init(json:):SearchResults.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "json[&quot;message&quot;].string">
+               value = "message.element">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -121,6 +97,44 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "WeatherApiService.getForecast(city:):WeatherApiService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Weather.init(json:):Weather.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;main&quot;].string">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WeatherInCityViewModel.initIcon():WeatherInCityViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "iconId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in FiveDayForecastDetailViewModel.bind():FiveDayForecastDetailViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self!.canSubmitNote">
+            </PersistentString>
+            <PersistentString
+               value = "$0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "City.init(json:):City.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;weather&quot;][&quot;id&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ForecastViewController.submit(_:):ForecastViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -129,10 +143,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in closure #1 in Reactive&lt;A&gt;.items&lt;A, B, C&gt;(cellIdentifier:cellType:):UITableView+Rx.swift">
+         contextName = "closure #1 in WeatherApiService.getForecast(city:):WeatherApiService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tv">
+               value = "error.localizedDescription">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

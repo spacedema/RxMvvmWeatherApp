@@ -21,13 +21,12 @@ class ForecastListViewController: UIViewController, UITableViewDelegate {
     // MARK: Fields
     private var disposeBag: DisposeBag!
     private var viewModel: SearchResultsListViewModel!
-    private var api: WeatherApiService!
+    public var api: WeatherApiService!
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.api = WeatherApiService(fetcher: AlamofireNetworking())
         disposeBag = DisposeBag()
         
         tableView.rx.setDelegate(self)

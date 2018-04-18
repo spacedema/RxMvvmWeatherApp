@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
-  - Nimble (7.1.0)
+  - Nimble (7.1.1)
   - PKHUD (5.0.0)
   - Quick (1.2.0)
   - RxAlamofire (4.2.0):
@@ -15,6 +15,8 @@ PODS:
   - RxSwift (4.1.2)
   - SwiftyJSON (4.0.0)
   - Swinject (2.4.0)
+  - SwinjectStoryboard (1.2.1):
+    - Swinject (~> 2.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -27,10 +29,11 @@ DEPENDENCIES:
   - RxSwift
   - SwiftyJSON
   - Swinject
+  - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  Nimble: 9c6651c3021af6de54c3ed90a4a0a87d548f7359
+  Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
@@ -39,7 +42,8 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  SwinjectStoryboard: de60d1d30fbf442fe90fc5c31d9fff89cf3ef64f
 
-PODFILE CHECKSUM: e81a6a2dc0885c8d7aaff9fce64d497b52ac5f7a
+PODFILE CHECKSUM: 0aeda31e5ebcc6d4d198bc2eb7175d95dd01dcab
 
 COCOAPODS: 1.4.0

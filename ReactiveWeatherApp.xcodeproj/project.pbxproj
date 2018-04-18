@@ -11,6 +11,7 @@
 		D514D8912074EBE200C9F256 /* SearchResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D8902074EBE200C9F256 /* SearchResultsListViewModel.swift */; };
 		D514D894207510EB00C9F256 /* SearchResultsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */; };
 		D514D8962076A9B600C9F256 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D514D8952076A9B600C9F256 /* Operators.swift */; };
+		D5199AB720875261004C6537 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5199AB620875261004C6537 /* SwinjectStoryboard+Setup.swift */; };
 		D51E638E20866E7C0097C16F /* StubNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E638D20866E7C0097C16F /* StubNetwork.swift */; };
 		D5205F8F2084E2A300CF6B8F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5205F8E2084E2A300CF6B8F /* Endpoints.swift */; };
 		D522C36D2085E6F50014D3AB /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522C36C2085E6F50014D3AB /* NetworkingProtocol.swift */; };
@@ -21,6 +22,8 @@
 		D575998A20737D0A000ECE14 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575998920737D0A000ECE14 /* Forecast.swift */; };
 		D575998C20737F12000ECE14 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575998B20737F12000ECE14 /* Weather.swift */; };
 		D575998E20738F7C000ECE14 /* WeatherApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575998D20738F7C000ECE14 /* WeatherApiService.swift */; };
+		D59A770220875F0C00B08072 /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A770120875F0C00B08072 /* ForecastListViewController.swift */; };
+		D59A77042087627E00B08072 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A77032087627E00B08072 /* MockNetwork.swift */; };
 		D5A7CB5D20726BCB0041EB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A7CB5C20726BCB0041EB72 /* AppDelegate.swift */; };
 		D5A7CB6220726BCB0041EB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5A7CB6020726BCB0041EB72 /* Main.storyboard */; };
 		D5A7CB6420726BCB0041EB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A7CB6320726BCB0041EB72 /* Assets.xcassets */; };
@@ -58,6 +61,7 @@
 		D514D8902074EBE200C9F256 /* SearchResultsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsListViewModel.swift; sourceTree = "<group>"; };
 		D514D893207510EB00C9F256 /* SearchResultsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCellViewModel.swift; sourceTree = "<group>"; };
 		D514D8952076A9B600C9F256 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		D5199AB620875261004C6537 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		D51E638D20866E7C0097C16F /* StubNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetwork.swift; sourceTree = "<group>"; };
 		D5205F8E2084E2A300CF6B8F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		D522C36C2085E6F50014D3AB /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		D575998920737D0A000ECE14 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		D575998B20737F12000ECE14 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		D575998D20738F7C000ECE14 /* WeatherApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiService.swift; sourceTree = "<group>"; };
+		D59A770120875F0C00B08072 /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
+		D59A77032087627E00B08072 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		D5A7CB5920726BCB0041EB72 /* ReactiveWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A7CB5C20726BCB0041EB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5A7CB6120726BCB0041EB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,8 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				D522C3792085FD7B0014D3AB /* Info.plist */,
-				D5CE480120865A4600511C6B /* WeatherFetcherSpec.swift */,
 				D51E638D20866E7C0097C16F /* StubNetwork.swift */,
+				D59A77032087627E00B08072 /* MockNetwork.swift */,
+				D5CE480120865A4600511C6B /* WeatherFetcherSpec.swift */,
+				D59A770120875F0C00B08072 /* ForecastListViewController.swift */,
 			);
 			path = ReactiveWeatherAppTests;
 			sourceTree = "<group>";
@@ -197,13 +205,14 @@
 		D5A7CB5B20726BCB0041EB72 /* ReactiveWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				D5A7CB5C20726BCB0041EB72 /* AppDelegate.swift */,
 				D575998620737B10000ECE14 /* Model */,
 				D514D89220750C1D00C9F256 /* VIew */,
 				D514D88F2074EB7200C9F256 /* ViewModel */,
 				D5EB71FF207BA8FF009A2439 /* Utils */,
 				D5EB71FE207BA8E7009A2439 /* Service */,
 				D5A7CB6020726BCB0041EB72 /* Main.storyboard */,
+				D5A7CB5C20726BCB0041EB72 /* AppDelegate.swift */,
+				D5199AB620875261004C6537 /* SwinjectStoryboard+Setup.swift */,
 				D5A7CB6320726BCB0041EB72 /* Assets.xcassets */,
 				D5A7CB6520726BCB0041EB72 /* LaunchScreen.storyboard */,
 				D5A7CB6820726BCB0041EB72 /* Info.plist */,
@@ -386,6 +395,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -396,6 +406,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,6 +427,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
@@ -429,6 +441,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
@@ -496,6 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59A77042087627E00B08072 /* MockNetwork.swift in Sources */,
+				D59A770220875F0C00B08072 /* ForecastListViewController.swift in Sources */,
 				D5CE480220865A4600511C6B /* WeatherFetcherSpec.swift in Sources */,
 				D51E638E20866E7C0097C16F /* StubNetwork.swift in Sources */,
 			);
@@ -518,6 +533,7 @@
 				D5205F8F2084E2A300CF6B8F /* Endpoints.swift in Sources */,
 				D575998E20738F7C000ECE14 /* WeatherApiService.swift in Sources */,
 				D514D8912074EBE200C9F256 /* SearchResultsListViewModel.swift in Sources */,
+				D5199AB720875261004C6537 /* SwinjectStoryboard+Setup.swift in Sources */,
 				D5EB71F9207B81CD009A2439 /* FiveDayForecast.swift in Sources */,
 				D5EB71FB207B8C85009A2439 /* FiveDayForecastListViewCell.swift in Sources */,
 				D5EB720A207D3156009A2439 /* FiveDayForecastCellViewModelType.swift in Sources */,
