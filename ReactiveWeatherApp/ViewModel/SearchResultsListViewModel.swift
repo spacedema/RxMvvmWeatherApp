@@ -33,9 +33,9 @@ class SearchResultsListViewModel : SearchResultsListViewModelType {
     
 
     // MARK: Fields
-    private let isLoadingVariable = Variable(false)
+    private let isLoadingVariable = BehaviorRelay(value: false)
     private let errorSubject = PublishSubject<Error>()
-    private let citiesVariable = Variable<[SearchResultsCellViewModel]>([])
+    private let citiesVariable = BehaviorRelay<[SearchResultsCellViewModel]>(value: [])
     private let apiService: WeatherApiService
     private let disposeBag = DisposeBag()
     
@@ -56,19 +56,19 @@ extension SearchResultsListViewModel {
     private func bindObservableToFetchCities() {
        
         searchText.asObservable()
-        .throttle(1, scheduler: MainScheduler.instance)
-        .filter { $0.count > 2 }
-        .distinctUntilChanged()
-        .do(onNext: { [weak self] _ in self?.isLoadingVariable.value = true })
-        // dif between flatMap and flapMapLatest is that flatMapLatest destroys previous calls from sequence
-        .flatMapLatest ({ [weak self] query -> Observable<[SearchResultsCellViewModel]> in
-            if let this = self {
-                return this.fetchCitiesList(query: query)
-            }
+            .throttle(1, scheduler: MainScheduler.instance)
+            .filter { $0.count > 2 }
+            .distinctUntilChanged()
+            .do(onNext: { [weak self] _ in self?.isLoadingVariable.accept(true) })
+            // dif between flatMap and flapMapLatest is that flatMapLatest destroys previous calls from sequence
+            .flatMapLatest ({ [weak self] query -> Observable<[SearchResultsCellViewModel]> in
+                if let this = self {
+                    return this.fetchCitiesList(query: query)
+                }
             
             return Observable.just([])
         })
-        .do(onNext: { [weak self] _ in self?.isLoadingVariable.value = false })
+        .do(onNext: { [weak self] _ in self?.isLoadingVariable.accept(false) })
         .bind(to: self.citiesVariable)
         .disposed(by: disposeBag)
     }

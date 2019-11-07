@@ -13,7 +13,7 @@ import RxCocoa
 protocol FiveDayForecastDetailViewModelType {
     
     // MARK: Input
-    var noteVariable: Variable<String> { get }
+    var noteVariable: BehaviorRelay<String> { get }
     var submitButtonDidTap: PublishSubject<Void> { get }
     
     

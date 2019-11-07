@@ -13,7 +13,7 @@ import RxSwift
 protocol SearchResultsCellViewModelType {
     
     // MARK: Input
-    var isChecked: Variable<Bool> { get }
+    var isChecked: BehaviorRelay<Bool> { get }
     
     
     // MARK: Output

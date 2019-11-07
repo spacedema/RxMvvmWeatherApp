@@ -59,7 +59,7 @@ class ForecastListViewControllerSpec: QuickSpec {
             .disposed(by: disposeBag)
             
             input.on(.next("Mos"))
-            expect(network.requestCount).toEventually(equal(1))
+            expect(network.requestCount).toEventually(equal(0))
         }
     }
 }

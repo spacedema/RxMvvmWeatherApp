@@ -13,7 +13,7 @@ import RxCocoa
 class SearchResultsCellViewModel : SearchResultsCellViewModelType {
     
     // MARK: Input
-    let isChecked = Variable<Bool>(false)
+    let isChecked = BehaviorRelay<Bool>(value: false)
     
     
     // MARK: Output

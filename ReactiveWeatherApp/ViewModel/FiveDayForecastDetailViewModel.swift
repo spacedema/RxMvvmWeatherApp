@@ -14,7 +14,7 @@ class FiveDayForecastDetailViewModel : FiveDayForecastDetailViewModelType {
     
     // MARK: Input
     let submitButtonDidTap: PublishSubject<Void> = .init()
-    let noteVariable: Variable<String> = Variable.init("")
+    let noteVariable: BehaviorRelay<String> = BehaviorRelay.init(value: "")
     
     
     // MARK: Output
@@ -30,7 +30,7 @@ class FiveDayForecastDetailViewModel : FiveDayForecastDetailViewModelType {
     var submitResult: Observable<String> = Observable.just("")
     
     // MARK: Properties
-    private let isLoadingVariable = Variable(false)
+    private let isLoadingVariable = BehaviorRelay(value: false)
     private let errorSubject = PublishSubject<Error>()
     private let disposeBag = DisposeBag()
     private var cityId: Int!
@@ -67,7 +67,7 @@ extension FiveDayForecastDetailViewModel {
         
         self.submitResult = submitButtonDidTap
             .do(onNext: { [weak self] _ in
-                self?.isLoadingVariable.value = true
+                self?.isLoadingVariable.accept(true)
             })
             .flatMapLatest { [weak self] result -> Observable<String> in
                 if let this = self {
@@ -81,7 +81,7 @@ extension FiveDayForecastDetailViewModel {
                 }
             }
             .do(onNext: { [weak self] _ in
-                self?.isLoadingVariable.value = false
+                self?.isLoadingVariable.accept(false)
                 self?.canSubmitNote.on(.next(false))
             })
     }

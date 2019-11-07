@@ -35,7 +35,7 @@ func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
-func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
+func <-> <Base>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
         .bind(to: textInput.text)
     let bindToVariable = textInput.text
@@ -57,7 +57,7 @@ func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Dispo
              and you hit "Done" button on keyboard.
              */
             if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != variable.value {
-                variable.value = nonMarkedTextValue
+                variable.accept(nonMarkedTextValue)
             }
             }, onCompleted:  {
                 bindToUIDisposable.dispose()
@@ -66,7 +66,7 @@ func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Dispo
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
-func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
+func <-> <T>(property: ControlProperty<T>, variable: BehaviorRelay<T>) -> Disposable {
     if T.self == String.self {
 //        #if DEBUG
 //        fatalError("It is ok to delete this message, but this is here to warn that you are maybe trying to bind to some `rx.text` property directly to variable.\n" +
@@ -81,7 +81,7 @@ func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable 
         .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
-            variable.value = n
+            variable.accept(n)
         }, onCompleted:  {
             bindToUIDisposable.dispose()
         })
